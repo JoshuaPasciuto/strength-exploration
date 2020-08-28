@@ -1,0 +1,127 @@
+<style>
+    .strength-table {
+        border-radius: 15px;
+        border: solid 1px #DDEEEE;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font: normal 13px Arial, sans-serif;
+    }
+    
+    .strength-table th {
+        background-color: #b0cae7;
+        border: solid 1px #DDEEEE;
+        color: #3f396d;
+        padding: 10px;
+        text-align: left;
+        text-shadow: 1px 1px 1px #fff;
+    }
+    
+    .strength-table tbody td {
+        border: solid 1px #DDEEEE;
+        background-color: #DDEEEE;
+        color: #333;
+        padding: 10px;
+        text-shadow: 1px 1px 1px #fff;
+    }
+</style>
+
+<script>
+    $(document).ready(function() {
+        console.log("ready!");
+        console.log($(".checkmark"));
+
+        $(".strength").click(function() {
+            var selection = this.innerText;
+            var e = this;
+            if (this.classList.contains("clicked") == false) {
+                $(e).css("background-color", "red");
+                $(e).addClass("clicked");
+            } else {
+                $(e).css("background-color", "#DDEEEE");
+                $(e).removeClass("clicked");
+            }
+
+            for (var i = 0; i < $(".checkmark").length; i++) {
+                if ($(".checkmark")[i].parentElement.innerText == selection) {
+                    console.log($(".checkmark")[i].parentElement.innerText);
+                    console.log($(".checkmark")[i]);
+                    $(".checkmark")[i].trigger('click');
+
+                }
+            }
+        });
+
+        $(".checkmark").click(function() {
+            console.log(this);
+        });
+
+    });
+</script>
+
+<p>
+    <span style="font-weight: bold; font-size: 18px;">
+        In this worksheet, you will identify your strengths and ways in
+        which you are already using them.
+    </span>
+</p>
+<table class="strength-table">
+    <tbody>
+        <tr class="strength-row t-one">
+            <td class="strength">Wisdom</td>
+            <td class="strength">Artistic Ability</td>
+            <td class="strength">Curiosity</td>
+            <td class="strength">Leadership</td>
+        </tr>
+        <tr class="strength-row t-two">
+            <td class="strength">Empathy</td>
+            <td class="strength">Honesty</td>
+            <td class="strength">Open Mindedness</td>
+            <td class="strength">Persistence</td>
+        </tr>
+        <tr class="strength-row t-tdree">
+            <td class="strength">Enthusiasum</td>
+            <td class="strength">Kindness</td>
+            <td class="strength">Love</td>
+            <td class="strength">Social Awareness</td>
+        </tr>
+        <tr class="strength-row t-four">
+            <td class="strength">Fairness</td>
+            <td class="strength">Bravery</td>
+            <td class="strength">Cooperation</td>
+            <td class="strength">Forgiveness</td>
+        </tr>
+        <tr class="strength-row t-five">
+            <td class="strength">Modesty</td>
+            <td class="strength">Common Sense</td>
+            <td class="strength">Self-Control</td>
+            <td class="strength">Patience</td>
+        </tr>
+        <tr class="strength-row t-six">
+            <td class="strength">Gratitude</td>
+            <td class="strength">Love of Learning</td>
+            <td class="strength">Humor</td>
+            <td class="strength">Spirituality</td>
+        </tr>
+        <tr class="strength-row t-seven">
+            <td class="strength">Ambition</td>
+            <td class="strength">Creativity</td>
+            <td class="strength">Confidence</td>
+            <td class="strength">Intelligence</td>
+        </tr>
+        <tr class="strength-row t-eight">
+            <td class="strength">Athleticism</td>
+            <td class="strength">Discipline</td>
+            <td class="strength">Assertiveness</td>
+            <td class="strength">Logic</td>
+        </tr>
+        <tr class="strength-row t-nine">
+            <td class="strength">Optimism</td>
+            <td class="strength">Independence</td>
+            <td class="strength">Flexibility</td>
+            <td class="strength">Adventurousness</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<p><span style="font-weight: bold; font-size: 18px;"><br></span></p>
